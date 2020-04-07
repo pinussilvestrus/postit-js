@@ -2,25 +2,18 @@
   "name": "postit-js",
   "version": "0.0.0",
   "scripts": {
-    "all": "run-s lint test distro test:distro",
-    "lint": "eslint .",
-    "dev": "npm test -- --auto-watch --no-single-run",
-    "distro": "node tasks/build-distro.js",
-    "test:distro": "node tasks/test-distro.js",
-    "prepublishOnly": "run-s distro test:distro"
+    "all": "run-s lint",
+    "lint": "eslint ."
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bpmn-io/bpmn-js"
+    "url": "https://github.com/pinussilvestrus/postit-js"
   },
   "keywords": [
-    "bpmn",
-    "bpmn-js",
+    "diagram-js",
     "toolkit",
     "web modeler",
-    "modeler",
-    "modeling",
-    "process modeling"
+    "postits"
   ],
   "author": {
     "name": "Niklas Kiefer",
