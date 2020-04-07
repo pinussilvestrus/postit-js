@@ -1,12 +1,10 @@
-# bpmn-js Modeler Example
+# postit-js Modeler Example
 
-This example uses [bpmn-js](https://github.com/bpmn-io/bpmn-js) to implement a modeler for BPMN 2.0 process diagrams. It serves as the basis of the bpmn-js demo application available at [demo.bpmn.io](http://demo.bpmn.io).
+This example uses [postit-js](https://github.com/pinussilvestrus/postit-js) to implement a modeler for postit diagrams.
 
 ## About
 
-This example is a node-style web application that builds a user interface around the bpmn-js BPMN 2.0 modeler.
-
-![demo application screenshot](https://raw.githubusercontent.com/bpmn-io/bpmn-js-examples/master/modeler/docs/screenshot.png "Screenshot of the example application")
+This example is a node-style web application that builds a user interface around the postit-js modeler.
 
 
 ## Building
@@ -19,7 +17,7 @@ To install all project dependencies execute
 npm install
 ```
 
-Build the application (including [bpmn-js](https://github.com/bpmn-io/bpmn-js)) via
+Build the application (including [postit-js](https://github.com/pinussilvestrus/postit-js)) via
 
 ```
 npm run all

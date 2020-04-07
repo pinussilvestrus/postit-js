@@ -1,7 +1,7 @@
 {
-  "name": "bpmn-js-example-modeler",
+  "name": "postit-js-example-modeler",
   "version": "0.0.0",
-  "description": "A simple modeler built with bpmn-js",
+  "description": "A simple modeler built with postit-js",
   "scripts": {
     "all": "run-s lint build",
     "build": "webpack --mode production",
@@ -9,23 +9,13 @@
     "lint": "eslint .",
     "start": "run-s dev"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/bpmn-io/bpmn-js-examples"
-  },
   "keywords": [
-    "bpmnjs-example"
+    "postitjs-example"
   ],
   "author": {
-    "name": "Nico Rehwaldt",
-    "url": "https://github.com/nikku"
+    "name": "Niklas Kiefer",
+    "url": "https://github.com/pinussilvestrus"
   },
-  "contributors": [
-    {
-      "name": "bpmn.io contributors",
-      "url": "https://github.com/bpmn-io"
-    }
-  ],
   "license": "MIT",
   "devDependencies": {
     "copy-webpack-plugin": "^4.6.0",
