@@ -11,7 +11,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.bpmn$/,
+        test: /\.postit$/,
         use: 'raw-loader'
       }
     ]
