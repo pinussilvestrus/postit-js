@@ -13,6 +13,14 @@ module.exports = {
       {
         test: /\.postit$/,
         use: 'raw-loader'
+      },
+      {
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+        use: ['file-loader']
       }
     ]
   },

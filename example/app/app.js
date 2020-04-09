@@ -1,5 +1,8 @@
 import $ from 'jquery';
 
+import '../../resources/bpmn-font/css/bpmn.css';
+import '../../resources/diagram-js.css';
+
 import PostItModeler from '../../lib/Modeler';
 
 import diagramXML from '../resources/newDiagram.postit';
