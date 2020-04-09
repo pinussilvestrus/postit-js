@@ -20,6 +20,14 @@
           "type": "String"
         }
       ]
+    },
+    {
+      "name": "SquarePostit",
+      "superClass": ["postit:Postit"]
+    },
+    {
+      "name": "CirclePostit",
+      "superClass": ["postit:Postit"]
     }
   ]
 }

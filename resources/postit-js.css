@@ -8,5 +8,13 @@
     margin: 8px;
     width: 32px !important;
     height: 32px !important;
-    background-color: #C7FE80; 
+    background-color: #7FC844; 
+}
+
+.pjs-postit-circle {
+  margin: 8px;
+  border-radius: 90px;
+  width: 32px !important;
+  height: 32px !important;
+  background-color: #F46F60; 
 }
