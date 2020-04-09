@@ -19,6 +19,10 @@
   background-color: #f46f60;
 }
 
+.djs-palette {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
 .pjs-text-box:before {
   content: 'Abc';
   font-size: medium;
