@@ -23,3 +23,12 @@
   content: 'Abc';
   font-size: medium;
 }
+
+.pjs-group {
+  margin: 6px;
+  width: 32px !important;
+  height: 32px !important;
+  stroke-dasharray: 0.9 0.9;
+  border-radius: 3px;
+  border: 1px dashed black;
+}
