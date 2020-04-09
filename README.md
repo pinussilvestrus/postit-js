@@ -10,6 +10,14 @@ Create post-it boards - created with `diagram-js`.
 
 Checkout the [Demo](https://postit-js-demo.netlify.com/).
 
+## Features
+
+* Create resizable Post-its on the Canvas (squared and circled) via
+  * Palette
+  * Double Click (latest element type will be respected)
+* Change the color of Post-its
+* Create simple Text Boxes on the Canvas
+
 ### Development Setup
 
 Spin up the application for development, all strings attached:
