@@ -32,3 +32,34 @@
   border-radius: 3px;
   border: 1px dashed black;
 }
+
+.pjs-color-entry-disabled {
+  opacity: 0.1;
+  cursor: not-allowed !important;
+}
+
+.pjs-color-entry-GREEN {
+  background-color: #7EC845 !important;
+}
+
+.pjs-color-entry-PINK {
+  background-color: #F46F60 !important;
+}
+
+.pjs-color-entry-BLUE {
+  background-color: #B8D6F7 !important;
+}
+
+.pjs-color-entry-ORANGE {
+  background-color: #FF9D48 !important;
+}
+
+.pjs-color-entry-YELLOW {
+  background-color: #F5D128 !important;
+}
+
+.pjs-color-entry-BLACK {
+  background-color: black !important;
+}
+
+
