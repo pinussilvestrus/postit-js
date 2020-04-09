@@ -1,0 +1,12 @@
+@font-face {
+  font-family: "IBM Plex";
+  src: url("./ibm-plex-font/IBMPlexSans-Regular.ttf");
+  font-display: swap;
+}
+
+.pjs-postit-square {
+    margin: 8px;
+    width: 32px !important;
+    height: 32px !important;
+    background-color: #C7FE80; 
+}

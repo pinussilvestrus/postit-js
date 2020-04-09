@@ -1,4 +1,5 @@
 html, body, #canvas {
+  font-family: 'IBM Plex Sans', sans-serif;
   height: 100%;
   padding: 0;
   margin: 0;

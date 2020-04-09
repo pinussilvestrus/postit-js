@@ -2,6 +2,7 @@ import $ from 'jquery';
 
 import '../../resources/bpmn-font/css/bpmn.css';
 import '../../resources/diagram-js.css';
+import '../../resources/postit-js.css';
 
 import PostItModeler from '../../lib/Modeler';
 
