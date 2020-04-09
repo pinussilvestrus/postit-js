@@ -28,6 +28,10 @@
     {
       "name": "CirclePostit",
       "superClass": ["postit:Postit"]
+    },
+    {
+      "name": "TextBox",
+      "superClass": ["bpmn:Task"]
     }
   ]
 }

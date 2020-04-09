@@ -5,10 +5,10 @@
 }
 
 .pjs-postit-square {
-    margin: 8px;
-    width: 32px !important;
-    height: 32px !important;
-    background-color: #7FC844; 
+  margin: 8px;
+  width: 32px !important;
+  height: 32px !important;
+  background-color: #7fc844;
 }
 
 .pjs-postit-circle {
@@ -16,5 +16,10 @@
   border-radius: 90px;
   width: 32px !important;
   height: 32px !important;
-  background-color: #F46F60; 
+  background-color: #f46f60;
+}
+
+.pjs-text-box:before {
+  content: 'Abc';
+  font-size: medium;
 }
