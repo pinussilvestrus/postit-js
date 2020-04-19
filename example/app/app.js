@@ -18,8 +18,6 @@ var modeler = new PostItModeler({
 
 function openFile(file, callback) {
 
-  console.log(file);
-
   // check file api availability
   if (!window.FileReader) {
     return window.alert(
