@@ -6,7 +6,7 @@ import '../../resources/postit-js.css';
 
 import PostItModeler from '../../lib/Modeler';
 
-import diagramXML from '../resources/newDiagram.postit';
+import diagramXML from '../resources/newBoard.xml';
 
 // modeler instance
 var modeler = new PostItModeler({
@@ -52,9 +52,9 @@ var fileInput = $('<input type="file" />').appendTo(document.body).css({
 });
 
 
-function openDiagram(bpmnXML) {
+function openDiagram(xml) {
   // import diagram
-  modeler.importXML(bpmnXML, function(err) {
+  modeler.importXML(xml, function(err) {
     if (err) {
       return console.error('could not import postit diagram', err);
     }
@@ -93,7 +93,7 @@ $(function() {
 
     if (data) {
       link.addClass('active').attr({
-        'href': 'data:application/bpmn20-xml;charset=UTF-8,' + encodedData,
+        'href': 'data:application/xml;charset=UTF-8,' + encodedData,
         'download': name
       });
     } else {
