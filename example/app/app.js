@@ -6,7 +6,9 @@ import '../../resources/postit-js.css';
 
 import PostItModeler from '../../lib/Modeler';
 
-import diagramXML from '../resources/newBoard.xml';
+import newBoardXML from '../resources/newBoard.xml';
+
+import emptyBoardXML from '../resources/emptyBoard.xml';
 
 // modeler instance
 var modeler = new PostItModeler({
@@ -115,7 +117,7 @@ $(function() {
   modeler.on('commandStack.changed', exportArtifacts);
 
   openNew.click(function() {
-    openDiagram(diagramXML);
+    openDiagram(emptyBoardXML);
   });
 
   openBoard.on('click', function() {
@@ -129,7 +131,7 @@ $(function() {
 });
 
 
-openDiagram(diagramXML);
+openDiagram(newBoardXML);
 
 
 // helpers //////////////////////
