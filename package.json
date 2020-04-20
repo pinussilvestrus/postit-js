@@ -4,7 +4,8 @@
   "scripts": {
     "all": "run-s lint",
     "lint": "eslint .",
-    "postinstall": "cd example && npm install"
+    "postinstall": "cd example && npm install",
+    "sync:live": "git checkout live && git merge master && git push origin live && git checkout master"
   },
   "repository": {
     "type": "git",
