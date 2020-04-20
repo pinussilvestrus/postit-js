@@ -1,0 +1,248 @@
+{
+  "name": "POSTITDI",
+  "uri": "http://some-company/schema/postitdi",
+  "prefix": "postitDi",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "types": [
+    {
+      "name": "PostitRootBoard",
+      "properties": [
+        {
+          "name": "plane",
+          "type": "PostitPlane",
+          "redefines": "Board#rootElement"
+        },
+        {
+          "name": "labelStyle",
+          "type": "PostitLabelStyle",
+          "isMany": true
+        }
+      ],
+      "superClass": ["Board"]
+    },
+    {
+      "name": "PostitPlane",
+      "properties": [
+        {
+          "name": "boardElement",
+          "isAttr": true,
+          "isReference": true,
+          "type": "postit:BoardElement",
+          "redefines": "BoardElement#modelElement"
+        }
+      ],
+      "superClass": ["Plane"]
+    },
+    {
+      "name": "PostitShape",
+      "properties": [
+        {
+          "name": "boardElement",
+          "isAttr": true,
+          "isReference": true,
+          "type": "postit:BoardElement",
+          "redefines": "BoardElement#modelElement"
+        },
+        {
+          "name": "label",
+          "type": "PostitLabel"
+        }
+      ],
+      "superClass": ["LabeledShape"]
+    },
+    {
+      "name": "PostitLabel",
+      "properties": [
+        {
+          "name": "labelStyle",
+          "type": "PostitLabelStyle",
+          "isAttr": true,
+          "isReference": true,
+          "redefines": "BoardElement#style"
+        }
+      ],
+      "superClass": ["Label"]
+    },
+    {
+      "name": "PostitLabelStyle",
+      "properties": [
+        {
+          "name": "font",
+          "type": "dc:Font"
+        }
+      ],
+      "superClass": ["Style"]
+    },
+    {
+      "name": "BoardElement",
+      "isAbstract": true,
+      "properties": [
+        {
+          "name": "id",
+          "isAttr": true,
+          "isId": true,
+          "type": "String"
+        },
+        {
+          "name": "owningBoard",
+          "type": "Board",
+          "isReadOnly": true,
+          "isVirtual": true,
+          "isReference": true
+        },
+        {
+          "name": "owningElement",
+          "type": "BoardElement",
+          "isReadOnly": true,
+          "isVirtual": true,
+          "isReference": true
+        },
+        {
+          "name": "modelElement",
+          "isReadOnly": true,
+          "isVirtual": true,
+          "isReference": true,
+          "type": "Element"
+        },
+        {
+          "name": "style",
+          "type": "Style",
+          "isReadOnly": true,
+          "isVirtual": true,
+          "isReference": true
+        }
+      ]
+    },
+    {
+      "name": "Node",
+      "isAbstract": true,
+      "superClass": ["BoardElement"]
+    },
+    {
+      "name": "Board",
+      "isAbstract": true,
+      "properties": [
+        {
+          "name": "id",
+          "isAttr": true,
+          "isId": true,
+          "type": "String"
+        },
+        {
+          "name": "rootElement",
+          "type": "BoardElement",
+          "isReadOnly": true,
+          "isVirtual": true
+        },
+        {
+          "name": "name",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "resolution",
+          "isAttr": true,
+          "type": "Real"
+        },
+        {
+          "name": "ownedStyle",
+          "type": "Style",
+          "isReadOnly": true,
+          "isMany": true,
+          "isVirtual": true
+        }
+      ]
+    },
+    {
+      "name": "Shape",
+      "isAbstract": true,
+      "superClass": ["Node"],
+      "properties": [
+        {
+          "name": "bounds",
+          "type": "dc:Bounds"
+        }
+      ]
+    },
+    {
+      "name": "Plane",
+      "isAbstract": true,
+      "superClass": ["Node"],
+      "properties": [
+        {
+          "name": "planeElement",
+          "type": "BoardElement",
+          "subsettedProperty": "BoardElement-ownedElement",
+          "isMany": true
+        }
+      ]
+    },
+    {
+      "name": "LabeledEdge",
+      "isAbstract": true,
+      "superClass": ["Edge"],
+      "properties": [
+        {
+          "name": "ownedLabel",
+          "type": "Label",
+          "isReadOnly": true,
+          "subsettedProperty": "BoardElement-ownedElement",
+          "isMany": true,
+          "isVirtual": true
+        }
+      ]
+    },
+    {
+      "name": "LabeledShape",
+      "isAbstract": true,
+      "superClass": ["Shape"],
+      "properties": [
+        {
+          "name": "ownedLabel",
+          "type": "Label",
+          "isReadOnly": true,
+          "subsettedProperty": "BoardElement-ownedElement",
+          "isMany": true,
+          "isVirtual": true
+        }
+      ]
+    },
+    {
+      "name": "Label",
+      "isAbstract": true,
+      "superClass": ["Node"],
+      "properties": [
+        {
+          "name": "bounds",
+          "type": "dc:Bounds"
+        }
+      ]
+    },
+    {
+      "name": "Style",
+      "isAbstract": true,
+      "properties": [
+        {
+          "name": "id",
+          "isAttr": true,
+          "isId": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "Extension",
+      "properties": [
+        {
+          "name": "values",
+          "isMany": true,
+          "type": "Element"
+        }
+      ]
+    }
+  ],
+  "enumerations": [],
+  "associations": []
+}

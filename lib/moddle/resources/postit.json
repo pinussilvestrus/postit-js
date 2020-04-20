@@ -1,0 +1,117 @@
+{
+  "name": "Postit",
+  "uri": "http://some-company/schema/postit",
+  "prefix": "postit",
+  "xml": {
+    "tagAlias": "lowerCase"
+  },
+  "types": [
+    {
+      "name": "BoardElement",
+      "isAbstract": true,
+      "properties": [
+        {
+          "name": "name",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "id",
+          "isAttr": true,
+          "type": "String",
+          "isId": true
+        }
+      ]
+    },
+    {
+      "name": "PostitBoard",
+      "superClass": ["RootElement"],
+      "properties": [
+        {
+          "name": "boardElements",
+          "isMany": true,
+          "type": "BoardElement"
+        }
+      ]
+    },
+    {
+      "name": "Postit",
+      "superClass": ["BoardElement"],
+      "properties": [
+        {
+          "name": "color",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
+      "name": "SquarePostit",
+      "superClass": ["Postit"]
+    },
+    {
+      "name": "CirclePostit",
+      "superClass": ["Postit"]
+    },
+    {
+      "name": "TextBox",
+      "superClass": ["BoardElement"]
+    },
+    {
+      "name": "Group",
+      "superClass": ["BoardElement"]
+    },
+    {
+      "name": "RootElement",
+      "isAbstract": true,
+      "superClass": [
+        "BoardElement"
+      ]
+    },
+    {
+      "name": "Definitions",
+      "superClass": [
+        "BoardElement"
+      ],
+      "properties": [
+        {
+          "name": "targetNamespace",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "expressionLanguage",
+          "default": "http://www.w3.org/1999/XPath",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "typeLanguage",
+          "default": "http://www.w3.org/2001/XMLSchema",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "rootElements",
+          "type": "RootElement",
+          "isMany": true
+        },
+        {
+          "name": "rootBoards",
+          "isMany": true,
+          "type": "postitDi:PostitRootBoard"
+        },
+        {
+          "name": "exporter",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "exporterVersion",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    }
+  ]
+}
