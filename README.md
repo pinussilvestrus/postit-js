@@ -8,7 +8,7 @@ Create post-it boards - created with `diagram-js`.
 
 ![Screencast](./resources/screencast.gif)
 
-Checkout the [Demo](https://postit-js-demo.netlify.com/).
+Checkout the [Demo](https://postit-js-demo.netlify.app/).
 
 ## Features
 
