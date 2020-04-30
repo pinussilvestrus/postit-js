@@ -130,6 +130,7 @@ $(function() {
 
 });
 
+initSentry();
 
 openDiagram(newBoardXML);
 
@@ -146,4 +147,16 @@ function debounce(fn, timeout) {
 
     timer = setTimeout(fn, timeout);
   };
+}
+
+function initSentry() {
+  if (process.env.SENTRY_DSN && process.env.SOURCE_VERSION && typeof Sentry !== 'undefined') {
+    Sentry.init({
+      dsn: process.env.SENTRY_DSN,
+      release: process.env.SOURCE_VERSION
+    });
+
+    // TEST
+    Sentry.captureException(new Error("Something broke"));
+  }
 }

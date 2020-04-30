@@ -20,6 +20,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@sentry/webpack-plugin": "^1.11.1",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^3.5.1",
     "eslint": "^5.0.1",
