@@ -157,6 +157,6 @@ function initSentry() {
     });
 
     // TEST
-    // Sentry.captureException(new Error('Something broke'));
+    Sentry.captureException(new Error('Something broke'));
   }
 }
