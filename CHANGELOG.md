@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * ...
 
+## 0.1.1
+
+* `FIX`: ability to delete elements created directly on canvas ([#12](https://github.com/pinussilvestrus/postit-js/issues/12))
+
 ## 0.1.0
 
 Initial release
