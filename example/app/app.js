@@ -130,7 +130,9 @@ $(function() {
 
 });
 
+// bootstrapping
 initSentry();
+initGA();
 
 openDiagram(newBoardXML);
 
@@ -159,4 +161,11 @@ function initSentry() {
     // TEST
     // Sentry.captureException(new Error('Something broke'));
   }
+}
+
+function initGA() {
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'UA-72700874-2');
 }
