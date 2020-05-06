@@ -5,6 +5,7 @@
   },
   "globals": {
     "Promise": true,
-    "Sentry": true
+    "Sentry": true,
+    "dataLayer": true
   }
 }
