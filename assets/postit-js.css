@@ -27,8 +27,8 @@
 }
 
 .pjs-image {
-  background-image: url("./icons/image.svg");
-  margin: 4px 8px 4px 8px;
+  content: url("./icons/image.svg");
+  margin: 8px 8px 4px 8px;
   width: 32px !important;
   height: 32px !important;
 }
@@ -43,9 +43,9 @@
 }
 
 .pjs-group {
-  margin: 6px;
-  width: 32px !important;
-  height: 32px !important;
+  margin: 4px 8px 8px 8px;
+  width: 30px !important;
+  height: 30px !important;
   stroke-dasharray: 0.9 0.9;
   border-radius: 3px;
   border: 1px dashed black;
