@@ -62,6 +62,17 @@
       "superClass": ["BoardElement"]
     },
     {
+      "name": "Image",
+      "superClass": ["BoardElement"],
+      "properties": [
+        {
+          "name": "src",
+          "isAttr": true,
+          "type": "String"
+        }
+      ]
+    },
+    {
       "name": "RootElement",
       "isAbstract": true,
       "superClass": [

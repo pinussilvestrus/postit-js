@@ -7,6 +7,10 @@
 @import '../node_modules/diagram-js/assets/diagram-js.css';
 @import '../node_modules/bpmn-font/dist/css/bpmn.css';
 
+.djs-palette {
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2) !important;
+}
+
 .pjs-postit-square {
   margin: 8px;
   width: 32px !important;
@@ -22,8 +26,15 @@
   background-color: #f46f60;
 }
 
-.djs-palette {
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2) !important;
+.pjs-image {
+  background-image: url("./icons/image.svg");
+  margin: 4px 8px 4px 8px;
+  width: 32px !important;
+  height: 32px !important;
+}
+
+.pjs-image:hover {
+  fill: rgb(255, 116, 0);;
 }
 
 .pjs-text-box:before {
@@ -38,6 +49,10 @@
   stroke-dasharray: 0.9 0.9;
   border-radius: 3px;
   border: 1px dashed black;
+}
+
+.pjs-group:hover {
+  border-color: rgb(255, 116, 0);;
 }
 
 .pjs-color-entry-disabled {
