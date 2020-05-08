@@ -1,13 +1,9 @@
 import $ from 'jquery';
 
-import '../../resources/bpmn-font/css/bpmn.css';
-import '../../resources/diagram-js.css';
-import '../../resources/postit-js.css';
-
-import PostItModeler from '../../lib/Modeler';
+import 'postit-js-core/assets/postit-js.css';
+import PostItModeler from 'postit-js-core/lib/Modeler';
 
 import newBoardXML from '../resources/newBoard.xml';
-
 import emptyBoardXML from '../resources/emptyBoard.xml';
 
 // modeler instance

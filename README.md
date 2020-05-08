@@ -4,7 +4,7 @@
 
 Create post-it boards - built with [diagram-js](https://github.com/bpmn-io/diagram-js).
 
-![Screencast](./resources/screencast.gif)
+![Screencast](./docs/screencast.gif)
 
 Checkout the [**Demo**](https://postit-js-demo.netlify.app/)
 

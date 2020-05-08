@@ -4,6 +4,9 @@
   font-display: swap;
 }
 
+@import '../node_modules/diagram-js/assets/diagram-js.css';
+@import '../node_modules/bpmn-font/dist/css/bpmn.css';
+
 .pjs-postit-square {
   margin: 8px;
   width: 32px !important;
