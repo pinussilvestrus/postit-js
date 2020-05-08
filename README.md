@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/72130b1d-f56b-473e-8f3b-50a5af916e64/deploy-status)](https://app.netlify.com/sites/postit-js-demo/deploys) [![Build Status](https://travis-ci.com/pinussilvestrus/postit-js.svg?branch=master)](https://travis-ci.com/pinussilvestrus/postit-js)
 
-Create post-it boards - built with [diagram-js](https://github.com/bpmn-io/diagram-js).
+Create post-it brainstorming boards - built with [diagram-js](https://github.com/bpmn-io/diagram-js).
 
 ![Screencast](./docs/screencast.gif)
 
@@ -15,6 +15,42 @@ Checkout the [**Demo**](https://postit-js-demo.netlify.app/)
   * Double Click (latest element type will be respected)
 * Change the color of Post-its
 * Create simple Text Boxes on the Canvas
+
+## Installation
+
+Install the package to include it into your web application
+
+```sh
+$ npm install postit-js-core --save
+```
+
+## Usage
+
+To get started, create a [postit-js](https://github.com/pinussilvestrus/postit-js) instance
+and render a post-it board into your web application
+
+```javascript
+import 'postit-js-core/assets/postit-js.css';
+import PostItModeler from 'postit-js-core/lib/Modeler';
+
+let xml; // my post-it xml 
+const modeler = new PostItModeler({
+  container: '#canvas',
+  keyboard: {
+    bindTo: window,
+  }
+});
+
+modeler.importXML(xml, function(err) {
+  if (err) {
+    return console.error('could not import postit board', err);
+  }
+
+  console.log('board rendered');
+});
+```
+
+For using `postit-js` inside your web application you'll need a source code bundler, e.g. [webpack](https://webpack.js.org/). Checkout the [example](./example) for getting inspiration. 
 
 ### Development Setup
 

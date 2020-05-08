@@ -11,7 +11,7 @@ var modeler = new PostItModeler({
   container: '#canvas',
   keyboard: {
     bindTo: window,
-  },
+  }
 });
 
 function openFile(file, callback) {
@@ -46,15 +46,15 @@ var fileInput = $('<input type="file" />').appendTo(document.body).css({
   display: 'none',
   overflow: 'hidden'
 }).on('change', function(e) {
-  openFile(e.target.files[0], openDiagram);
+  openFile(e.target.files[0], openBoard);
 });
 
 
-function openDiagram(xml) {
-  // import diagram
+function openBoard(xml) {
+  // import board
   modeler.importXML(xml, function(err) {
     if (err) {
-      return console.error('could not import postit diagram', err);
+      return console.error('could not import postit board', err);
     }
   });
 }
@@ -63,21 +63,21 @@ function saveSVG(done) {
   modeler.saveSVG(done);
 }
 
-function saveDiagram(done) {
+function saveBoard(done) {
 
   modeler.saveXML({ format: true }, function(err, xml) {
     done(err, xml);
   });
 }
 
-// bootstrap diagram functions
+// bootstrap board functions
 $(function() {
 
-  var downloadLink = $('#js-download-diagram');
+  var downloadLink = $('#js-download-board');
   var downloadSvgLink = $('#js-download-svg');
 
   var openNew = $('#js-open-new');
-  var openBoard = $('#js-open-diagram');
+  var openExistingBoard = $('#js-open-board');
 
   $('.buttons a').click(function(e) {
     if (!$(this).is('.active')) {
@@ -105,7 +105,7 @@ $(function() {
       setEncoded(downloadSvgLink, 'board.svg', err ? null : svg);
     });
 
-    saveDiagram(function(err, xml) {
+    saveBoard(function(err, xml) {
       setEncoded(downloadLink, 'board.xml', err ? null : xml);
     });
   }, 500);
@@ -113,10 +113,10 @@ $(function() {
   modeler.on('commandStack.changed', exportArtifacts);
 
   openNew.click(function() {
-    openDiagram(emptyBoardXML);
+    openBoard(emptyBoardXML);
   });
 
-  openBoard.on('click', function() {
+  openExistingBoard.on('click', function() {
     var input = $(fileInput);
 
     // clear input so that previously selected file can be reopened
@@ -130,7 +130,7 @@ $(function() {
 initSentry();
 initGA();
 
-openDiagram(newBoardXML);
+openBoard(newBoardXML);
 
 
 // helpers //////////////////////
