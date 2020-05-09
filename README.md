@@ -15,6 +15,8 @@ Checkout the [**Demo**](https://postit-js-demo.netlify.app/)
   * Double Click (latest element type will be respected)
 * Change the color of Post-its
 * Create simple Text Boxes on the Canvas
+* Create grouping frame elements on the Canvas
+* Add external image resources on the Canvas
 
 ## Installation
 
