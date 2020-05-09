@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * ...
 
+## 0.3.0
+
+* `FEAT`: add image element support ([#11](https://github.com/pinussilvestrus/postit-js/issues/11))
+
 ## 0.2.0
 
 * `CHORE`: first npm release, add integration instructions
