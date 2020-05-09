@@ -27,7 +27,9 @@
 }
 
 .pjs-image {
-  content: url("./icons/image.svg");
+  background-image: url("./icons/image.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 8px 8px 4px 8px;
   width: 32px !important;
   height: 32px !important;
