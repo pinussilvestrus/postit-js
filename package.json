@@ -27,23 +27,23 @@
     "*.css"
   ],
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "eslint-plugin-bpmn-io": "^0.10.0",
-    "eslint-plugin-import": "^2.18.0",
-    "npm-run-all": "^4.1.2"
+    "eslint": "^7.0.0",
+    "eslint-plugin-bpmn-io": "^0.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {
     "bpmn-font": "^0.9.3",
     "css.escape": "^1.5.1",
-    "diagram-js": "^6.4.1",
+    "diagram-js": "^6.6.1",
     "diagram-js-direct-editing": "^1.6.1",
     "ids": "^1.0.0",
-    "inherits": "^2.0.1",
-    "min-dash": "^3.5.1",
+    "inherits": "^2.0.4",
+    "min-dash": "^3.5.2",
     "min-dom": "^3.1.2",
     "moddle": "^5.0.1",
     "moddle-xml": "8.0.1",
     "object-refs": "^0.3.0",
-    "tiny-svg": "^2.2.1"
+    "tiny-svg": "^2.2.2"
   }
 }

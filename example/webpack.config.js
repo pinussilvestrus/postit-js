@@ -31,7 +31,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new CopyWebpackPlugin([{ from: '**/*.{html,css}', context: 'app/' }]),
+    new CopyWebpackPlugin({ patterns: [{ from: '**/*.{html,css}', context: 'app/' }] }),
     new webpack.DefinePlugin({
       'process.env.SENTRY_DSN': JSON.stringify(SENTRY_DSN || null),
       'process.env.SOURCE_VERSION': JSON.stringify(SOURCE_VERSION || null)

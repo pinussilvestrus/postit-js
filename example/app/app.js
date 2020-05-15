@@ -51,6 +51,7 @@ var fileInput = $('<input type="file" />').appendTo(document.body).css({
 
 
 function openBoard(xml) {
+
   // import board
   modeler.importXML(xml, function(err) {
     if (err) {
