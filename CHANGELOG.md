@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * ...
 
+## 0.4.0
+
+* `FEAT`: ability to re-configure image source ([#18](https://github.com/pinussilvestrus/postit-js/issues/18))
+* `CHORE`: update bpmn.io logo
+
 ## 0.3.0
 
 * `FEAT`: add image element support ([#11](https://github.com/pinussilvestrus/postit-js/issues/11))
