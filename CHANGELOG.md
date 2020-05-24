@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * ...
 
+## 0.5.0
+
+* `FEAT`: delete empty text boxes ([#6](https://github.com/pinussilvestrus/postit-js/issues/6))
+* `FIX`: transparent background when editing post-it elements ([#4](https://github.com/pinussilvestrus/postit-js/issues/4))
+
 ## 0.4.0
 
 * `FEAT`: ability to re-configure image source ([#18](https://github.com/pinussilvestrus/postit-js/issues/18))
