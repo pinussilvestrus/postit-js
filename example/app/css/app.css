@@ -29,34 +29,15 @@ button {
   margin: 0;
 }
 
-ul.io-control-list {
-  list-style-type: none;
-}
-
-.io-control-list.io-horizontal, .io-control-list.io-horizontal li {
+.io-horizontal, .io-horizontal li {
     display: inline-block;
 }
 
-.io-editing-tools .io-control {
-    margin-left: 10px;
-}
-
-.io-control {
-  background: #FAFAFA;
-  border-radius: 2px;
-  border: solid 1px #E0E0E0;
-  padding: 5px;
-}
-
-.io-control-list.io-horizontal, .io-control-list.io-horizontal li {
-    display: inline-block;
-}
-
-.io-control-list a:hover, .io-control-list a:visited:hover, .io-control-list button:hover {
+.io-editing-tools button:hover {
     color: #333333;
 }
 
-.io-control-list button {
+.io-editing-tools button {
   color: #555555;
 }
 
@@ -77,30 +58,30 @@ ul.io-control-list {
 .icon-keyboard {
   box-sizing: border-box;
   cursor: pointer;
-  font-size: 22px;
-    line-height: 1.2em;
+  font-size: 18px;
+  line-height: 1.2em;
 }
 
 .icon-keyboard::before {
   content: '\f11c';
   display: inline-block;
-    line-height: 1.2em;
+  line-height: 1.2em;
 }
 
 .icon-resize-full {
-box-sizing: border-box;
-cursor: pointer;
-font-size: 22px;
-    line-height: 1.2em;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1.2em;
 }
 
 .icon-resize-full::before {
-  content: '\F31E';
+  content: '\f31e';
   display: inline-block;
 }
 
 #io-dialog-main{
-    display:none; /*default*/
+  display:none; /*default*/
 }
 
 .io-dialog .content {
@@ -139,6 +120,9 @@ font-size: 22px;
 
 .buttons {
   position: fixed;
+}
+
+.bottom-buttons {
   bottom: 20px;
   left: 20px;
 }

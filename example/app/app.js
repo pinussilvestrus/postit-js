@@ -16,13 +16,13 @@ var modeler = new PostItModeler({
 
 /* screen interaction */
 function enterFullscreen(element) {
-  if(element.requestFullscreen) {
+  if (element.requestFullscreen) {
     element.requestFullscreen();
-  } else if(element.mozRequestFullScreen) {
+  } else if (element.mozRequestFullScreen) {
     element.mozRequestFullScreen();
-  } else if(element.msRequestFullscreen) {
+  } else if (element.msRequestFullscreen) {
     element.msRequestFullscreen();
-  } else if(element.webkitRequestFullscreen) {
+  } else if (element.webkitRequestFullscreen) {
     element.webkitRequestFullscreen();
   }
 }
@@ -37,33 +37,33 @@ function exitFullscreen() {
   } else if (document.msExitFullscreen) {
     document.msExitFullscreen();
   }
-} 
+}
 
 const state = {
   fullScreen: false,
   keyboardHelp: false,
-}
-document.getElementById("js-toggle-fullscreen").addEventListener("click", function(){
+};
+document.getElementById('js-toggle-fullscreen').addEventListener('click', function() {
   state.fullScreen = !state.fullScreen;
-  if(state.fullScreen) {
+  if (state.fullScreen) {
     enterFullscreen(document.documentElement);
   } else {
-    exitFullscreen()
+    exitFullscreen();
   }
 });
-document.getElementById("js-toggle-keyboard-help").addEventListener("click", function(){
+document.getElementById('js-toggle-keyboard-help').addEventListener('click', function() {
   state.keyboardHelp = !state.keyboardHelp;
-  let displayProp = "none";
-  if(state.keyboardHelp){
-    displayProp = "block"
+  let displayProp = 'none';
+  if (state.keyboardHelp) {
+    displayProp = 'block';
   }
-  document.getElementById("io-dialog-main").style.display = displayProp
+  document.getElementById('io-dialog-main').style.display = displayProp;
 });
-document.getElementById("io-dialog-main").addEventListener("click", function(){
+document.getElementById('io-dialog-main').addEventListener('click', function() {
   state.keyboardHelp = !state.keyboardHelp;
-  let displayProp = "none";
-  if(!state.keyboardHelp){
-    document.getElementById("io-dialog-main").style.display = displayProp;
+  let displayProp = 'none';
+  if (!state.keyboardHelp) {
+    document.getElementById('io-dialog-main').style.display = displayProp;
   }
 });
 
