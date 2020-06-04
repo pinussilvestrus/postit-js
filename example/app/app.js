@@ -11,9 +11,63 @@ var modeler = new PostItModeler({
   container: '#canvas',
   keyboard: {
     bindTo: window,
+  },
+});
+
+/* screen interaction */
+function enterFullscreen(element) {
+  if(element.requestFullscreen) {
+    element.requestFullscreen();
+  } else if(element.mozRequestFullScreen) {
+    element.mozRequestFullScreen();
+  } else if(element.msRequestFullscreen) {
+    element.msRequestFullscreen();
+  } else if(element.webkitRequestFullscreen) {
+    element.webkitRequestFullscreen();
+  }
+}
+
+function exitFullscreen() {
+  if (document.exitFullscreen) {
+    document.exitFullscreen();
+  } else if (document.mozCancelFullScreen) {
+    document.mozCancelFullScreen();
+  } else if (document.webkitExitFullscreen) {
+    document.webkitExitFullscreen();
+  } else if (document.msExitFullscreen) {
+    document.msExitFullscreen();
+  }
+} 
+
+const state = {
+  fullScreen: false,
+  keyboardHelp: false,
+}
+document.getElementById("js-toggle-fullscreen").addEventListener("click", function(){
+  state.fullScreen = !state.fullScreen;
+  if(state.fullScreen) {
+    enterFullscreen(document.documentElement);
+  } else {
+    exitFullscreen()
+  }
+});
+document.getElementById("js-toggle-keyboard-help").addEventListener("click", function(){
+  state.keyboardHelp = !state.keyboardHelp;
+  let displayProp = "none";
+  if(state.keyboardHelp){
+    displayProp = "block"
+  }
+  document.getElementById("io-dialog-main").style.display = displayProp
+});
+document.getElementById("io-dialog-main").addEventListener("click", function(){
+  state.keyboardHelp = !state.keyboardHelp;
+  let displayProp = "none";
+  if(!state.keyboardHelp){
+    document.getElementById("io-dialog-main").style.display = displayProp;
   }
 });
 
+/* file functions */
 function openFile(file, callback) {
 
   // check file api availability
