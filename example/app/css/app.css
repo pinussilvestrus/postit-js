@@ -9,3 +9,53 @@ html, body, #canvas {
   bottom: 20px;
   left: 20px;
 }
+
+/* screen interaction helpers & modal */
+
+#io-dialog-main{
+  display:none; /*default*/
+}
+
+#io-editing-tools-buttons {
+  display: block;
+  position:fixed;
+  top:0px;
+  right: 80px;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+}
+
+#io-editing-tools-buttons button:hover {
+    color: #333333;
+}
+
+.icon-keyboard {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1.2em;
+}
+
+.icon-keyboard::before {
+  content: '\f11c';
+  display: inline-block;
+  line-height: 1.2em;
+}
+
+.icon-resize-full {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1.2em;
+}
+
+.icon-resize-full::before {
+  content: '\f31e';
+  display: inline-block;
+}
+
+.keybindings-dialog .binding {
+	padding: 5px 10px;
+	font-family: monospace;
+}
