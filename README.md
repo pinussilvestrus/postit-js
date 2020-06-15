@@ -65,6 +65,13 @@ $ npm install
 $ npm run dev
 ```
 
+## Extensions
+
+Since [`diagram-js`](https://github.com/bpmn-io/diagram-js) and also this project is extendable by design, there exist a couple of great community maintained extensions
+
+* [`drag-drop-images`](https://github.com/xanpj/postit-js-extensions#drag-drop-images) - Drag and drop image files on the board
+* [`selection-organizer`](https://github.com/xanpj/postit-js-extensions#selection-organizer) - Organize and distribute groups of elements
+
 ## License
 
 MIT
