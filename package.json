@@ -44,6 +44,7 @@
     "moddle": "^5.0.1",
     "moddle-xml": "8.0.1",
     "object-refs": "^0.3.0",
+    "postit-js-extensions": "git+https://github.com/xanpj/postit-js-extensions.git",
     "tiny-svg": "^2.2.2"
   }
 }
