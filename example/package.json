@@ -35,6 +35,7 @@
   },
   "dependencies": {
     "jquery": "^3.5.1",
-    "postit-js-core": "file:../"
+    "postit-js-core": "file:../",
+    "postit-js-extensions": "git+https://github.com/xanpj/postit-js-extensions.git"
   }
 }
