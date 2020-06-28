@@ -34,7 +34,7 @@ ul {
   list-style-type: none;
 }
 
-a:hover {
+button:hover, a:hover {
   cursor: pointer;
 }
 
@@ -87,6 +87,16 @@ a:hover {
   opacity: 0.3;
   text-decoration: none;
 }
+
+.pjs-button-disabled,
+.pjs-button-disabled:hover,
+.pjs-button-disabled:active {
+  opacity: 0.3;
+  text-decoration: none;
+}
+
+ 
+
 
 .pjs-buttons a.pjs-buttons-active, .pjs-buttons button.pjs-buttons-active {
   opacity: 1.0;
@@ -307,7 +317,7 @@ a:hover {
 
 #pjs-image-selection-modal {
   position:absolute;
-  z-index:1;
+  z-index:5;
   width:270px;
   left:0px;
   top: 0px;
@@ -323,10 +333,32 @@ a:hover {
 }
 
 #pjs-image-selection-input-wrapper input {
-  text-align: left;
-  padding: 6px 10px;
   /*padding-left: 100px; /* "Search / URL" */
   padding-left: 50px;  /* "URL" */
+}
+
+.pjs-text {
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.pjs-ui-element {
+  color: black;
+  background-color: #f8f8f8;
+  display: inline-block;
+  font-size: 13px;
+  border: solid 1px #cdcdcd;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+input, textarea {
+  width: 100%;
+  text-align: left;
+  padding: 6px 10px;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
