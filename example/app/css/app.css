@@ -3,6 +3,7 @@ html, body, #canvas {
   height: 100%;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
 .bottom-buttons {
@@ -22,7 +23,7 @@ html, body, #canvas {
 /* screen interaction helpers & modal */
 
 #io-dialog-main{
-  display:none; /*default*/
+  display: none; /*default*/
 }
 
 #io-editing-tools-buttons {

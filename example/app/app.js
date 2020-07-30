@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-import 'postit-js-core/assets/postit-js.css';
+import 'postit-js-core/assets/postit-js.less';
 import PostItModeler from 'postit-js-core/lib/Modeler';
 import PostItExtensions from 'postit-js-extensions';
 
@@ -42,6 +42,7 @@ function exitFullscreen() {
     document.msExitFullscreen();
   }
 }
+
 
 const state = {
   fullScreen: false,
