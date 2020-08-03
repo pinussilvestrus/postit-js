@@ -6,7 +6,7 @@ Create post-it brainstorming boards - built with [diagram-js](https://github.com
 
 ![Screencast](./docs/screencast.gif)
 
-Checkout the [**Demo**](https://postit-js-demo.netlify.app/)
+Checkout the [**Demo**](https://postit-js-demo.netlify.app/) or the [**Experiments Page**](https://postit-js-experiments.netlify.app/) to get some inspiration.
 
 ## Features
 
