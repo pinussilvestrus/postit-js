@@ -37,7 +37,6 @@
     "jquery": "^3.5.1",
     "less": "^3.11.3",
     "less-loader": "^6.1.2",
-    "postit-js-core": "file:../",
-    "postit-js-extensions": "git+https://github.com/xanpj/postit-js-extensions.git"
+    "postit-js-core": "file:../"
   }
 }

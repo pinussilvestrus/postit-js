@@ -2,7 +2,6 @@ import $ from 'jquery';
 
 import 'postit-js-core/assets/postit-js.css';
 import PostItModeler from 'postit-js-core/lib/Modeler';
-import PostItExtensions from 'postit-js-extensions';
 
 import newBoardXML from '../resources/newBoard.xml';
 import emptyBoardXML from '../resources/emptyBoard.xml';
@@ -12,10 +11,7 @@ var modeler = new PostItModeler({
   container: '#canvas',
   keyboard: {
     bindTo: window,
-  },
-  additionalModules: [
-    PostItExtensions,
-  ],
+  }
 });
 
 /* screen interaction */
