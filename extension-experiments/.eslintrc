@@ -1,0 +1,11 @@
+{
+  "extends": "plugin:bpmn-io/es6",
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "Promise": true,
+    "Sentry": true,
+    "dataLayer": true
+  }
+}
