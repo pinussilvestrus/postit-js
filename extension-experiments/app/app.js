@@ -1,8 +1,7 @@
 import $ from 'jquery';
 
-import 'postit-js-core/assets/postit-js.css';
+import 'postit-js-core/assets/postit-js.less';
 import PostItModeler from 'postit-js-core/lib/Modeler';
-
 import PostItExtensions from 'postit-js-extensions';
 
 import newBoardXML from '../resources/newBoard.xml';
@@ -48,29 +47,6 @@ const state = {
   fullScreen: false,
   keyboardHelp: false,
 };
-document.getElementById('js-toggle-fullscreen').addEventListener('click', function() {
-  state.fullScreen = !state.fullScreen;
-  if (state.fullScreen) {
-    enterFullscreen(document.documentElement);
-  } else {
-    exitFullscreen();
-  }
-});
-document.getElementById('js-toggle-keyboard-help').addEventListener('click', function() {
-  state.keyboardHelp = !state.keyboardHelp;
-  let displayProp = 'none';
-  if (state.keyboardHelp) {
-    displayProp = 'block';
-  }
-  document.getElementById('io-dialog-main').style.display = displayProp;
-});
-document.getElementById('io-dialog-main').addEventListener('click', function() {
-  state.keyboardHelp = !state.keyboardHelp;
-  let displayProp = 'none';
-  if (!state.keyboardHelp) {
-    document.getElementById('io-dialog-main').style.display = displayProp;
-  }
-});
 
 /* file functions */
 function openFile(file, callback) {
@@ -132,6 +108,58 @@ function saveBoard(done) {
 
 // bootstrap board functions
 $(function() {
+
+  console.log('DOM fully loaded and parsed');
+
+  const ioEditingTools = document.querySelector('#io-editing-tools-buttons ul');
+  const topButton1Markup = `
+      <button id="js-toggle-keyboard-help" class="pjs-buttons-active" title="Toggle keyboard shortcuts overlay">
+        <span class="icon-keyboard pjs-general-icon"> </span>
+      </button>`;
+  const topButton2Markup = `
+      <button id="js-toggle-fullscreen" class="pjs-buttons-active" title="Toggle Fullscreen" >
+        <span class="icon-resize-full pjs-general-icon"> </span>
+      </button>`;
+
+  var topButton1 = document.createElement('li');
+  topButton1.innerHTML = topButton1Markup;
+  ioEditingTools.appendChild(topButton1);
+  var topButton2 = document.createElement('li');
+  topButton2.innerHTML = topButton2Markup;
+  ioEditingTools.appendChild(topButton2);
+
+  document.getElementById('js-toggle-fullscreen').addEventListener('click', function() {
+    state.fullScreen = !state.fullScreen;
+    if (state.fullScreen) {
+      enterFullscreen(document.documentElement);
+    } else {
+      exitFullscreen();
+    }
+  });
+
+  document.getElementById('js-toggle-keyboard-help').addEventListener('click', function() {
+    state.keyboardHelp = !state.keyboardHelp;
+    let displayProp = 'none';
+    if (state.keyboardHelp) {
+      displayProp = 'block';
+    }
+    document.getElementById('io-dialog-main').style.display = displayProp;
+  });
+
+  document.getElementById('io-dialog-main').addEventListener('click', function() {
+    state.keyboardHelp = !state.keyboardHelp;
+    let displayProp = 'none';
+    if (!state.keyboardHelp) {
+      document.getElementById('io-dialog-main').style.display = displayProp;
+    }
+  });
+
+  const githubCorner = document.querySelector('#github-corner');
+  githubCorner.style.display = 'block';
+  const spinner = document.querySelector('#spinner');
+  const overlay = document.querySelector('#overlay');
+  spinner.classList.add('fadeOut');
+  overlay.classList.add('fadeOut');
 
   var downloadLink = $('#js-download-board');
   var downloadSvgLink = $('#js-download-svg');

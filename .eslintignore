@@ -1,4 +1,5 @@
 coverage
 dist
 example
+extension-experiments
 *.json

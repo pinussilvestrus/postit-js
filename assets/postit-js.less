@@ -1,0 +1,597 @@
+@font-face {
+    font-family: "IBM Plex";
+    src: url("./ibm-plex-font/IBMPlexSans-Regular.ttf");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Font Awesome 5 Free Solid";
+    src: url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.eot");
+    /* IE9*/
+    src: url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+    url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.woff2") format("woff2"),
+    /* chrome、firefox */
+    url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.woff") format("woff"),
+    /* chrome、firefox */
+    url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.ttf") format("truetype"),
+    /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.svg#Font Awesome 5 Free Solid") format("svg");
+    /* iOS 4.1- */
+}
+@import '../node_modules/diagram-js/assets/diagram-js.css';
+@import '../node_modules/bpmn-font/dist/css/bpmn.css';
+@border: 1px solid #cdcdcd;
+@boxshadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2) !important;
+/* Overwriting Diagram.js */
+
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+
+.djs-palette-entries div:hover {
+    cursor: pointer;
+}
+.djs-palette {
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2) !important;
+}
+/* General */
+
+button {
+    border: none;
+    background: none;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+button:hover, a:hover {
+    cursor: pointer;
+}
+button:hover {
+    cursor: pointer;
+}
+input, textarea {
+    width: 100%;
+    text-align: left;
+    padding: 6px 10px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pjs-error {
+    color: #ff0000;
+}
+.pjs-visible {
+    display: block !important;
+}
+.pjs-first {
+    /* DONT CHANGE. USED AS PSEUDOCLASS */
+}
+.pjs-text {
+    color: black;
+    font-size: 13px;
+    font-weight: bold;
+}
+.pjs-ui-element {
+    color: black;
+    background-color: #f8f8f8;
+    display: inline-block;
+    font-size: 13px;
+    border: solid 1px #cdcdcd;
+}
+.pjs-horizontal {
+    display: inline-block;
+}
+.pjs-horizontal li {
+    float: left;
+}
+[class*=" pjs-general-icon"]::before {
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+}
+.pjs-general-icon {
+    font-family: "Font Awesome 5 Free Solid";
+    line-height: 1.2em;
+}
+.pjs-ui-element-bordered {
+    color: black;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    display: inline-block;
+    font-size: 13px;
+    border: solid 1px #cdcdcd;
+}
+/* pjs-buttons */
+
+.pjs-buttons {
+    position: fixed;
+}
+.pjs-buttons>ul {
+    display: block;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+    list-style: none;
+}
+.pjs-buttons>ul>li {
+    display: inline-block;
+    margin-right: 10px;
+}
+.pjs-buttons>ul>li>a, .pjs-buttons button {
+    color: black;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    display: inline-block;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    border: solid 1px #cdcdcd;
+}
+.pjs-buttons button:hover {
+    cursor: pointer;
+}
+.pjs-buttons a {
+    opacity: 0.3;
+    text-decoration: none;
+}
+.pjs-button-disabled, .pjs-button-disabled:hover, .pjs-button-disabled:active {
+    opacity: 0.3;
+    text-decoration: none;
+}
+.pjs-buttons a.pjs-buttons-active, .pjs-buttons button.pjs-buttons-active {
+    opacity: 1.0;
+    box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+.pjs-loader {
+    border: 16px solid #f8f8f8;
+    border-top: 16px solid #000;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+#pjs-main-loader {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    .pjs-container {
+     height: 100%;            
+     width: 100%;
+     margin: 0 auto;
+     display: flex;
+     vertical-align: middle;
+     align-items: center;
+     justify-content: center;
+        .pjs-loader {
+        }
+    }
+}
+/* pjs-io-dialog */
+
+.pjs-io-dialog {
+    position: fixed;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    top: 100px;
+    background: white;
+    padding: 10px 30px 20px 30px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    height: auto;
+    z-index: 1001;
+}
+.pjs-io-dialog.pjs-io-dialog-open::before {
+    content: '';
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #666;
+    opacity: 0.2;
+    z-index: 1001;
+}
+.pjs-io-dialog .pjs-io-dialog-content {
+    background: white;
+    z-index: 1001;
+    position: fixed;
+    width: 600px;
+    left: 50%;
+    margin-left: -300px;
+    top: 100px;
+    background: white;
+    padding: 10px 30px 20px 30px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    height: auto;
+}
+.pjs-io-dialog-section {
+    /*padding-top: 10px;*/
+}
+.pjs-io-dialog-section-grid {
+    padding-top: 10px;
+}
+.pjs-io-dialog-local {
+    padding: 10px;
+    background: white;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    height: auto;
+}
+.pjs-io-dialog-local .pjs-box-row {
+    min-width: 40px;
+}
+.pjs-io-dialog-local .pjs-box-row img {
+    width: 100%;
+    max-width: 100px;
+    object-fit: fill;
+    vertical-align: middle;
+}
+.pjs-section-spacer {
+    width: 100%;
+    height: 1px;
+    background-color: #555555;
+}
+.pjs-io-dialog-text-hint {
+    margin-top: 4px;
+    font-size: 13px;
+    text-align: left;
+    color: #555555;
+}
+.pjs-io-dialog-text-hint .pjs-tooltip .pjs-tooltiptext {
+    margin-left: -80px !important;
+}
+/* tool tip */
+
+.pjs-tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.pjs-tooltip .pjs-tooltiptext {
+    font-family: 'IBM Plex Sans', sans-serif;
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+    /* Fade in tooltip - takes 1 second to go from 0% to 100% opac: */
+    opacity: 0;
+    transition: opacity 1s;
+}
+.pjs-tooltip:hover .pjs-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.pjs-tooltip .pjs-tooltiptext::after {
+    content: " ";
+    position: absolute;
+    top: 100%;
+    /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+/* canvas drawing */
+
+.pjs-postit-square {
+    margin: 8px;
+    width: 32px !important;
+    height: 32px !important;
+    background-color: #7fc844;
+}
+.pjs-postit-circle {
+    margin: 8px;
+    border-radius: 90px;
+    width: 32px !important;
+    height: 32px !important;
+    background-color: #f46f60;
+}
+.pjs-image {
+    background-image: url("./icons/image.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 8px 8px 4px 8px;
+    width: 32px !important;
+    height: 32px !important;
+}
+.pjs-image-adj {
+    /*background-image: url("./icons/image.svg");*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 8px 8px 4px 8px;
+}
+.pjs-image:hover {
+    cursor: pointer;
+    fill: rgb(255, 116, 0);
+}
+.pjs-text-box:before {
+    content: 'Abc';
+    font-size: medium;
+}
+.pjs-group {
+    margin: 4px 8px 8px 8px;
+    width: 30px !important;
+    height: 30px !important;
+    stroke-dasharray: 0.9 0.9;
+    border-radius: 3px;
+    border: 1px dashed black;
+}
+.pjs-group:hover {
+    border-color: rgb(255, 116, 0);
+}
+.pjs-color-entry-disabled {
+    opacity: 0.1;
+    cursor: not-allowed !important;
+}
+.pjs-color-entry-GREEN {
+    background-color: #7EC845 !important;
+}
+.pjs-color-entry-PINK {
+    background-color: #F46F60 !important;
+}
+.pjs-color-entry-ICE_BLUE {
+    background-color: #B8D6F7 !important;
+}
+.pjs-color-entry-BLUE {
+    background-color: #23BFE7 !important;
+}
+.pjs-color-entry-ORANGE {
+    background-color: #FF9D48 !important;
+}
+.pjs-color-entry-YELLOW {
+    background-color: #F5D128 !important;
+}
+.pjs-color-entry-BLACK {
+    background-color: black !important;
+}
+
+/* image selection modal */
+
+#pjs-image-selection-modal {
+  position:absolute;
+  z-index:5;
+  left:0px;
+  top: 0px;
+
+    #pjs-image-selection-input-wrapper {
+      width: 100%;
+    }
+
+    #pjs-image-selection-input {
+      width: 100%;
+      margin: 0;
+    }
+
+    #pjs-image-selection-input-wrapper input {
+      /*padding-left: 100px; /* "Search / URL" */
+      padding-left: 50px;  /* "URL" */
+    }
+
+    .pjs-text {
+        color: black;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .pjs-ui-element {
+      color: black;
+      background-color: #f8f8f8;
+      display: inline-block;
+      font-size: 13px;
+      border: solid 1px #cdcdcd;
+    }
+
+    button:hover {
+      cursor: pointer;
+    }
+
+    input, textarea {
+      width: 100%;
+      text-align: left;
+      padding: 6px 10px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    #pjs-image-dialog-text-hint-list li {
+      line-height: 22px;
+      margin-left: 3px;
+    }
+
+    #pjs-image-dialog-text-hint-list li:first-child {
+        margin-left: 3px;
+    }
+
+    #pjs-image-dialog-text-hint-list li div {
+      display: inline-block;
+    }
+
+    #pjs-image-dialog-text-hint-list li:last-child {
+      margin-left: 5px;
+    }
+
+    #pjs-image-dialog-text-hint-list a {
+      display:block;
+      cursor: pointer;
+    }
+    #pjs-image-dialog-text-hint-list a:hover {
+      cursor: pointer;
+      color: #777;
+    }
+
+    .pjs-labeled-input {
+      position:relative;
+    }
+
+    .pjs-image-dialog-upload-icon, .pjs-image-dialog-upload-icon-error {
+      margin-left: 3px;
+      margin-right: 3px;
+      box-sizing: border-box;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .pjs-image-dialog-upload-icon-error {
+        margin-left: 0px;
+    }
+
+    .pjs-image-dialog-upload-icon-warning::before {
+        content:'\F071'; /*\f093*/
+        display: inline-block;
+        color: #CCCC00;
+    } 
+
+    .pjs-image-dialog-upload-icon::before {
+      content:'\F574'; /*\f093*/
+      display: inline-block;
+    }
+
+    .pjs-image-dialog-upload-icon-error::before {
+      content:'\F057';
+      display: inline-block;
+      color: #ff0000;
+    }
+
+    #pjs-image-selection-files-text-error {
+      display: none;
+      color: #ff0000;
+    }
+
+    #pjs-image-selection-files-text-upload {
+      color: #555555;
+    }
+
+    .pjs-input-text-static {
+      position:absolute;
+      left:10px;
+      font-weight:bold;
+      font-size:0.8em;
+      color:#555;
+      top:-21px;
+      line-height: 15px;
+    }
+
+    .pjs-io-dialog-text-hint {
+      padding-top: 10px;
+      padding-bottom: 0px;
+    }
+
+    .pjs-section-spacer {
+      width: 100%;
+      height: 1px;
+      background-color: #555555;
+    }
+
+    .pjs-io-dialog {
+      position: fixed;
+      width: 600px;
+      left: 50%;
+      margin-left: -300px;
+      top: 100px;
+      background: white;
+      padding: 10px 30px 20px 30px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      border-radius: 2px;
+      height: auto;
+      z-index: 1001;
+    }
+
+    .pjs-io-dialog.pjs-io-dialog-open::before {
+      content: '';
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background: #666;
+      opacity: 0.2;
+      z-index: 1001;
+    }
+
+    .pjs-io-dialog .pjs-io-dialog-content {
+      background: white;
+      z-index: 1001;
+      position: fixed;
+      width: 600px;
+      left: 50%;
+      margin-left: -300px;
+      top: 100px;
+      background: white;
+      padding: 10px 30px 20px 30px;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      border-radius: 2px;
+      height: auto;
+     }
+
+    .pjs-io-dialog-section {
+      padding-top:10px;
+    }
+
+    .pjs-io-dialog-section.pjs-first {
+      padding-top:0px;
+    }
+
+    .pjs-io-dialog-local {
+      padding: 10px;
+      background: white;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      border-radius: 2px;
+      height: auto;
+    }
+
+    .pjs-io-dialog-local .pjs-box-row {
+      min-width: 40px;
+    }
+
+    .pjs-io-dialog-local .pjs-box-row img {
+      width: 100%;
+      max-width: 100px;
+      object-fit: fill;
+      vertical-align: middle;
+    }
+
+    .pjs-buttons.pjs-image-selection-submit-wrapper {
+      position: relative;
+    }
+
+    .pjs-buttons.pjs-image-selection-submit-wrapper button {
+      width: 100%;
+    } 
+
+    .pjs-buttons.pjs-image-selection-submit-wrapper button:hover {
+      color: #555;
+    }
+
+    .pjs-buttons.pjs-image-selection-submit-wrapper button:active {
+      opacity: 1.0;
+      box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.1);
+    }
+}

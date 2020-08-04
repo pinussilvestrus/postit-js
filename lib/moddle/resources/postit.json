@@ -20,6 +20,36 @@
           "isAttr": true,
           "type": "String",
           "isId": true
+        },
+        {
+          "name": "objId",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "objTitle",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "objDescription",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "objStarred",
+          "isAttr": true,
+          "type": "Boolean"
+        },
+        {
+          "name": "objHidden",
+          "isAttr": true,
+          "type": "Boolean"
+        },
+        {
+          "name": "objCreationDate",
+          "isAttr": true,
+          "type": "String"
         }
       ]
     },
@@ -69,6 +99,31 @@
           "name": "source",
           "isAttr": true,
           "type": "String"
+        },
+        {
+          "name": "source2",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "sourceUnkeyed",
+          "isAttr": true,
+          "type": "String"
+        },
+        {
+          "name": "objStacked",
+          "isAttr": true,
+          "type": "Boolean"
+        },
+        {
+          "name": "objUnkeyed",
+          "isAttr": true,
+          "type": "Boolean"
+        },
+        {
+          "name": "objUnkeyedOriginal",
+          "isAttr": true,
+          "type": "Boolean"
         }
       ]
     },
