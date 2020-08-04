@@ -43,12 +43,10 @@ function exitFullscreen() {
   }
 }
 
-
 const state = {
   fullScreen: false,
   keyboardHelp: false,
 };
-
 
 /* file functions */
 function openFile(file, callback) {
@@ -138,7 +136,7 @@ $(function() {
       exitFullscreen();
     }
   });
-
+  
   document.getElementById('js-toggle-keyboard-help').addEventListener('click', function() {
     state.keyboardHelp = !state.keyboardHelp;
     let displayProp = 'none';
@@ -147,6 +145,7 @@ $(function() {
     }
     document.getElementById('io-dialog-main').style.display = displayProp;
   });
+  
   document.getElementById('io-dialog-main').addEventListener('click', function() {
     state.keyboardHelp = !state.keyboardHelp;
     let displayProp = 'none';

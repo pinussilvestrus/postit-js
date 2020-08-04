@@ -1,7 +1,7 @@
 {
-  "name": "postit-js-example-modeler",
+  "name": "postit-js-experiments",
   "version": "0.0.0",
-  "description": "A simple modeler built with postit-js",
+  "description": "Experiments built with postit-js",
   "scripts": {
     "all": "run-s lint build",
     "build": "webpack",
@@ -38,6 +38,6 @@
     "less": "^3.11.3",
     "less-loader": "^6.1.2",
     "postit-js-core": "file:../",
-    "postit-js-extensions": "git+https://github.com/xanpj/postit-js-extensions.git#ddc06cbadc6bf74b63281c4094a78660a12964bc"
+    "postit-js-extensions": "git+https://github.com/xanpj/postit-js-extensions.git"
   }
 }

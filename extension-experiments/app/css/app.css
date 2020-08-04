@@ -106,7 +106,6 @@ html, body, #canvas {
   100% { transform: rotate(360deg); transform: rotate(360deg); }
 }
 
-
 .bottom-buttons {
   bottom: 20px;
   left: 20px;
@@ -124,7 +123,7 @@ html, body, #canvas {
 /* screen interaction helpers & modal */
 
 #io-dialog-main{
-  display: none; /*default*/
+  display:none; /*default*/
 }
 
 #io-editing-tools-buttons {

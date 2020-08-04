@@ -6,7 +6,7 @@ Create post-it brainstorming boards - built with [diagram-js](https://github.com
 
 ![Screencast](./docs/screencast.gif)
 
-Checkout the [**Demo**](https://postit-js-demo.netlify.app/)
+Checkout the [**Demo**](https://postit-js-demo.netlify.app/) or the [**Experiments Page**](https://postit-js-experiments.netlify.app/) to get some inspiration.
 
 ## Features
 
@@ -71,6 +71,7 @@ Since [`diagram-js`](https://github.com/bpmn-io/diagram-js) and also this projec
 
 * [`drag-drop-images`](https://github.com/xanpj/postit-js-extensions#drag-drop-images) - Drag and drop image files on the board
 * [`selection-organizer`](https://github.com/xanpj/postit-js-extensions#selection-organizer) - Organize and distribute groups of elements
+* [`properties-panel`](https://github.com/xanpj/postit-js-extensions#properties-panel) - Properties panel for post-it elements
 
 ## License
 
