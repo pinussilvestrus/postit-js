@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<postit:Definitions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dc="http://www.omg.org/spec/DD/20100524/DC" id="sample-diagram">
+  <postit:PostitBoard id="Board_1">
+   <postit:SquarePostit name="A new idea" id="Postit_1" color="#7EC845" />
+  </postit:PostitBoard>
+  <postitDi:PostitRootBoard id="RootBoard_1">
+    <postitDi:PostitPlane id="PositPlane_1" boardElement="Board_1">
+      <postitDi:PostitShape id="Postit_1_di" boardElement="Postit_1">
+        <dc:Bounds x="300" y="200" width="150" height="150" />
+      </postitDi:PostitShape>
+    </postitDi:PostitPlane>
+  </postitDi:PostitRootBoard>
+</postit:Definitions>

@@ -1,0 +1,172 @@
+html, body, #canvas {
+  font-family: 'IBM Plex Sans', sans-serif;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+
+
+ @keyframes fadeOut {
+    0% {opacity: 1;}
+    99%{z-index:99}
+    100% {opacity: 0;z-index:-1;}
+ }
+ 
+ @-webkit-keyframes fadeOut {
+    0% {opacity: 1;}
+    99%{z-index:99}
+    100% {opacity: 0;z-index:-1;}
+ }
+
+ .fadeOut {
+    -webkit-animation-name: fadeOut;
+    animation-name: fadeOut;
+ }
+
+#github-corner {
+  display:none;
+}
+
+/** spinner **/
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    background: #000000;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+}
+
+#spinner {
+  display: block;
+  position: fixed;
+    z-index:101;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-animation-duration: 1s;
+  animation-duration: 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+}
+
+
+/** credit https://codepen.io/shrijal/pen/gObLbxW*/
+#spinner .spin-icon {
+  z-index:101;
+  margin: auto;
+  margin-top: -20px;
+  width: 80px;
+  height: 80px;
+
+  border: solid 3px #ffffff;
+  border-top-color:  #666;
+  border-left-color: #666;
+  border-radius: 80px;
+
+  -webkit-animation: loading-spinner 500ms linear infinite;
+  -moz-animation:    loading-spinner 500ms linear infinite;
+  -ms-animation:     loading-spinner 500ms linear infinite;
+  -o-animation:      loading-spinner 500ms linear infinite;
+  animation:         loading-spinner 500ms linear infinite;
+}
+
+@-webkit-keyframes loading-spinner {
+  0%   { -webkit-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-moz-keyframes loading-spinner {
+  0%   { -moz-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -moz-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-o-keyframes loading-spinner {
+  0%   { -o-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -o-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@-ms-keyframes loading-spinner {
+  0%   { -ms-transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { -ms-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+@keyframes loading-spinner {
+  0%   { transform: rotate(0deg);   transform: rotate(0deg); }
+  100% { transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+.bottom-buttons {
+  bottom: 20px;
+  left: 20px;
+}
+
+.bottom-buttons a:hover {
+  color: #555;
+}
+
+.bottom-buttons a.active {
+  opacity: 1.0;
+  box-shadow: 0px 2px 2px 0 rgba(0, 0, 0, 0.1);
+}
+
+/* screen interaction helpers & modal */
+
+#io-dialog-main{
+  display: none; /*default*/
+}
+
+#io-editing-tools-buttons {
+  display: block;
+  position:fixed;
+  top:0px;
+  right: 80px;
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+}
+
+#io-editing-tools-buttons button:hover {
+    color: #333333;
+}
+
+.icon-keyboard {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1.2em;
+}
+
+.icon-keyboard::before {
+  content: '\f11c';
+  display: inline-block;
+  line-height: 1.2em;
+}
+
+.icon-resize-full {
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1.2em;
+}
+
+.icon-resize-full::before {
+  content: '\f31e';
+  display: inline-block;
+}
+
+.keybindings-dialog .binding {
+	padding: 5px 10px;
+	font-family: monospace;
+}
