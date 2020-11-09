@@ -1,6 +1,7 @@
 !dist
 docs
-example
+examples
+extension-experiment
 resources
 .eslintignore
 .eslintrc
