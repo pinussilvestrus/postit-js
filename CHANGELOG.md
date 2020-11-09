@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * ...
 
+## 0.6.0
+
+* `CHORE`: examples cleanups
+
 ## 0.5.0
 
 * `FEAT`: delete empty text boxes ([#6](https://github.com/pinussilvestrus/postit-js/issues/6))
