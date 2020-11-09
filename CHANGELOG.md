@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## 0.6.0
 
+* `FEAT`: improve image selection ([#17](https://github.com/pinussilvestrus/postit-js/issues/17))
 * `CHORE`: examples cleanups
 
 ## 0.5.0
