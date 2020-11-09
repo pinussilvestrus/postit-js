@@ -1,6 +1,6 @@
 {
   "name": "postit-js-core",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "scripts": {
     "all": "run-s lint",
     "lint": "eslint .",
