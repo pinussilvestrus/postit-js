@@ -1,5 +1,6 @@
 !dist
 docs
+example
 resources
 .eslintignore
 .eslintrc
