@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 * ...
 
+## 0.6.2
+
+* `CHORE`: fix travis
+
 ## 0.6.1
 
 * `CHORE`: remove examples from package
