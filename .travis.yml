@@ -4,4 +4,5 @@ node_js: 'lts/*'
 script:
   - npm run all
   - cd example
+  - npm install
   - npm run all
