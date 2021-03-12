@@ -36,14 +36,9 @@ jobs:
         TEST_BROWSERS: ChromeHeadless
       run: xvfb-run npm run all
     - name: Build
-      if: matrix.os == 'windows-latest'
+      if: matrix.os != 'ubuntu-latest'
       env:
-        TEST_BROWSERS: ChromeHeadless
-      run: npm run all
-    - name: Build
-      if: matrix.os == 'macos-latest'
-      env:
-        TEST_BROWSERS: ChromeHeadless,Safari
+        TEST_BROWSERS: ChromeHeadless,Firefox
       run: npm run all
     - name: Setup and build example
       working-directory: ./example
