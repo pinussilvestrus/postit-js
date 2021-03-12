@@ -124,7 +124,7 @@ export function inject(fn) {
 
     if (!POSTIT_JS) {
       throw new Error(
-        'no bootstraped bpmn-js instance, ' +
+        'no bootstraped postit-js instance, ' +
         'ensure you created it via #boostrap(Modeler|Viewer)'
       );
     }
@@ -139,7 +139,7 @@ export function getPostitJS() {
 
 export function clearPostitJS() {
 
-  // clean up old bpmn-js instance
+  // clean up old postit-js instance
   if (POSTIT_JS) {
     POSTIT_JS.destroy();
 
