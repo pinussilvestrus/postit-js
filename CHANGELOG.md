@@ -6,7 +6,30 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 
+___Note:__ Yet to be released changes appear here._
+
 * ...
+
+## 1.0.0
+
+* `FEAT`: switch from callbacks to Promises ([`bf699810`](https://github.com/pinussilvestrus/postit-js/commit/bf6998100f52ce50f7fdd498c31e002a83e50968))
+* `CHORE`: add basic tests infrastructure ([`1ea64c90`](https://github.com/pinussilvestrus/postit-js/commit/1ea64c9012e2a0849c367cd0a39d981b2d336bf9))
+* `CHORE`: migrate CI to GitHub actions ([`b512c6c4`](https://github.com/pinussilvestrus/postit-js/commit/b512c6c4f815d082da70304834ce3eebbfc1d856))
+* `CHORE`: remove unused global connect tool ([`5016d943`](https://github.com/pinussilvestrus/postit-js/commit/5016d94325624a55dcf5dae026e195a1c94a7239))
+* `CHORE`: rename default branch to `main`
+* `CHORE`: bump to `diagram-js@7.2`
+* `CHORE`: bump to `moddle-xml@9`
+
+### Breaking Changes
+
+* APIs don't accept callbacks anymore, instead, they return a Promise now
+  * `viewer#importXML`
+  * `viewer#importDefinitions`
+  * `viewer#open`
+  * `viewer#saveXML`
+  * `viewer#saveSVG`
+  * `modeler#createDiagram`
+  * `importer#importPostitDiagram`
 
 ## 0.6.2
 
