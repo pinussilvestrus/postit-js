@@ -5,17 +5,18 @@ on: [push, pull_request]
 jobs:
   build:
 
-    runs-on: ubuntu-latest
-
     strategy:
       matrix:
-        node-version: [12.x, 10.x]
+        os: [ macos-latest, ubuntu-latest, windows-latest ]
+        node-version: [ 14 ]
+
+    runs-on: ${{ matrix.os }}
 
     steps:
     - name: Checkout 
       uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v2
       with:
         node-version: ${{ matrix.node-version }}
     - name: Cache Node.js modules
@@ -29,10 +30,21 @@ jobs:
           ${{ runner.OS }}-
     - name: Install depedencies
       run: npm install
-    - name: Execute library tests
-      run: npm run all
+    - name: Build and execute tests
+      if: matrix.os == 'ubuntu-latest'
       env:
-        CI: true
+        TEST_BROWSERS: ChromeHeadless
+      run: xvfb-run npm run all
+    - name: Build
+      if: matrix.os == 'windows-latest'
+      env:
+        TEST_BROWSERS: ChromeHeadless
+      run: npm run all
+    - name: Build
+      if: matrix.os == 'macos-latest'
+      env:
+        TEST_BROWSERS: ChromeHeadless,SAFARI
+      run: npm run all
     - name: Setup and build example
       working-directory: ./example
       run: |

@@ -1,6 +1,8 @@
 !dist
 docs
-examples
+example
+test/*
+!test/helper
 extension-experiment
 resources
 .eslintignore
