@@ -112,22 +112,17 @@ var fileInput = $('<input type="file" />').appendTo(document.body).css({
 function openBoard(xml) {
 
   // import board
-  modeler.importXML(xml, function(err) {
-    if (err) {
-      return console.error('could not import postit board', err);
-    }
+  return modeler.importXML(xml).catch(function(err) {
+    return console.error('could not import postit board', err);
   });
 }
 
-function saveSVG(done) {
-  modeler.saveSVG(done);
+function saveSVG() {
+  return modeler.saveSVG();
 }
 
-function saveBoard(done) {
-
-  modeler.saveXML({ format: true }, function(err, xml) {
-    done(err, xml);
-  });
+function saveBoard() {
+  return modeler.saveXML({ format: true });
 }
 
 // bootstrap board functions
@@ -161,18 +156,18 @@ $(function() {
 
   var exportArtifacts = debounce(function() {
 
-    saveSVG(function(err, svg) {
-      setEncoded(downloadSvgLink, 'board.svg', err ? null : svg);
+    saveSVG(function(result) {
+      setEncoded(downloadSvgLink, 'board.svg', result.svg);
     });
 
-    saveBoard(function(err, xml) {
-      setEncoded(downloadLink, 'board.xml', err ? null : xml);
+    saveBoard(function(result) {
+      setEncoded(downloadLink, 'board.xml', result.xml);
     });
   }, 500);
 
   modeler.on('commandStack.changed', exportArtifacts);
 
-  openNew.click(function() {
+  openNew.on('click', function() {
     openBoard(emptyBoardXML);
   });
 

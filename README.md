@@ -34,9 +34,11 @@ and render a post-it board into your web application
 
 ```javascript
 import 'postit-js-core/assets/postit-js.css';
+
 import PostItModeler from 'postit-js-core/lib/Modeler';
 
 let xml; // my post-it xml 
+
 const modeler = new PostItModeler({
   container: '#canvas',
   keyboard: {
@@ -44,12 +46,10 @@ const modeler = new PostItModeler({
   }
 });
 
-modeler.importXML(xml, function(err) {
-  if (err) {
-    return console.error('could not import postit board', err);
-  }
-
+modeler.importXML(xml).then(function() {
   console.log('board rendered');
+}).catch(function(error) {
+  console.error('could not import postit board', err);
 });
 ```
 
