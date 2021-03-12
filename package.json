@@ -6,7 +6,7 @@
     "lint": "eslint .",
     "test": "karma start karma.conf.js",
     "dev": "npm test -- --auto-watch --no-single-run",
-    "sync:live": "git checkout live && git merge master && git push origin live && git checkout master"
+    "sync:live": "git checkout live && git merge main && git push origin live && git checkout main"
   },
   "repository": {
     "type": "git",
