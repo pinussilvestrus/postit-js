@@ -43,7 +43,7 @@ jobs:
     - name: Build
       if: matrix.os == 'macos-latest'
       env:
-        TEST_BROWSERS: ChromeHeadless,SAFARI
+        TEST_BROWSERS: ChromeHeadless,Safari
       run: npm run all
     - name: Setup and build example
       working-directory: ./example
