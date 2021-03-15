@@ -28,9 +28,9 @@
     "*.css"
   ],
   "devDependencies": {
-    "chai": "^4.3.3",
+    "chai": "^4.3.4",
     "chai-match": "^1.1.1",
-    "eslint": "^7.21.0",
+    "eslint": "^7.22.0",
     "eslint-plugin-bpmn-io": "^0.12.0",
     "eslint-plugin-import": "^2.22.1",
     "file-loader": "^6.2.0",
@@ -49,7 +49,7 @@
     "raw-loader": "^4.0.2",
     "sinon": "^9.2.4",
     "sinon-chai": "^3.5.0",
-    "webpack": "^5.25.0"
+    "webpack": "^5.25.1"
   },
   "dependencies": {
     "bpmn-font": "^0.10.0",
