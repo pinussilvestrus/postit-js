@@ -28,7 +28,7 @@
     "*.css"
   ],
   "devDependencies": {
-    "chai": "^4.3.3",
+    "chai": "^4.3.4",
     "chai-match": "^1.1.1",
     "eslint": "^7.21.0",
     "eslint-plugin-bpmn-io": "^0.12.0",
