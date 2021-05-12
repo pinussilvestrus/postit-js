@@ -1,0 +1,37 @@
+{
+  "name": "postit-js-example-modeler",
+  "version": "0.0.0",
+  "description": "A simple modeler built with postit-js",
+  "scripts": {
+    "all": "run-s lint build",
+    "build": "vite build",
+    "dev": "run-p build:watch serve",
+    "build:watch": "vite",
+    "serve": "vite preview",
+    "lint": "eslint .",
+    "start": "run-s dev"
+  },
+  "private": "true",
+  "keywords": [
+    "postit-js-example"
+  ],
+  "author": {
+    "name": "Niklas Kiefer",
+    "url": "https://github.com/pinussilvestrus"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^7.26.0",
+    "eslint-plugin-bpmn-io": "^0.12.0",
+    "npm-run-all": "^4.1.5",
+    "rollup-plugin-string": "^3.0.0",
+    "vite": "^2.3.0",
+    "vite-plugin-sentry": "^1.0.9"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0",
+    "less": "^4.1.1",
+    "less-loader": "^8.1.1",
+    "postit-js-core": "file:../"
+  }
+}
