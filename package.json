@@ -12,6 +12,17 @@
     "type": "git",
     "url": "https://github.com/pinussilvestrus/postit-js"
   },
+  "files": [
+    ".babelrc",
+    "index.js",
+    "assets",
+    "dist",
+    "lib",
+    "test/util",
+    "test/helper",
+    "test/matchers",
+    "!.eslintrc"
+  ],
   "keywords": [
     "diagram-js",
     "toolkit",
