@@ -10,6 +10,12 @@ ___Note:__ Yet to be released changes appear here._
 
 * ...
 
+## 1.0.1
+
+* `FIX`: remove empty text boxes on cancel editing ([#20](https://github.com/pinussilvestrus/postit-js/issues/20))
+* `FIX`: add missing moddle descriptors to published package ([#95](https://github.com/pinussilvestrus/postit-js/issues/95))
+* `CHORE`: various dependency updates
+
 ## 1.0.0
 
 * `FEAT`: switch from callbacks to Promises ([`bf699810`](https://github.com/pinussilvestrus/postit-js/commit/bf6998100f52ce50f7fdd498c31e002a83e50968))
