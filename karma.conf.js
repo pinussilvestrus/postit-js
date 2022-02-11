@@ -54,7 +54,7 @@ module.exports = function(karma) {
           },
           {
             test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-            use: ['file-loader'],
+            use: [ 'file-loader' ],
           }
         ]
       },

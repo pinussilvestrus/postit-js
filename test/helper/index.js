@@ -90,7 +90,7 @@ export function boostrapPostitJS(PostitJS, diagram, options, locals) {
       var mockModule = {};
 
       forEach(_locals, function(v, k) {
-        mockModule[k] = ['value', v];
+        mockModule[k] = [ 'value', v ];
       });
 
       _options.modules = [].concat(_options.modules || [], [ mockModule ]);
