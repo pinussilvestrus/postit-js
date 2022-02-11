@@ -8,7 +8,7 @@ const SOURCE_VERSION = process.env.SOURCE_VERSION || process.env.npm_package_git
 
 module.exports = {
   entry: {
-    bundle: ['./app/app.js'],
+    bundle: [ './app/app.js' ],
   },
   output: {
     path: __dirname + '/public',
@@ -22,11 +22,11 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [ 'style-loader', 'css-loader' ],
       },
       {
         test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
-        use: ['file-loader'],
+        use: [ 'file-loader' ],
       },
       {
         test: /\.less$/i,
@@ -49,7 +49,7 @@ module.exports = {
     ],
   },
   plugins: [
-    new CopyWebpackPlugin({ patterns: [{ from: '**/*.{html,css,woff,ttf,eot,svg,woff2}', context: 'app/' }] }),
+    new CopyWebpackPlugin({ patterns: [ { from: '**/*.{html,css,woff,ttf,eot,svg,woff2}', context: 'app/' } ] }),
     new webpack.DefinePlugin({
       'process.env.SENTRY_DSN': JSON.stringify(SENTRY_DSN || null),
       'process.env.SOURCE_VERSION': JSON.stringify(SOURCE_VERSION || null)
@@ -67,7 +67,7 @@ function sentryIntegration() {
       new SentryWebpackPlugin({
         release: SOURCE_VERSION,
         include: '.',
-        ignore: ['node_modules', 'webpack.config.js', '*sentry.js'],
+        ignore: [ 'node_modules', 'webpack.config.js', '*sentry.js' ],
       })
     ];
   }
