@@ -65,7 +65,7 @@
   "dependencies": {
     "bpmn-font": "^0.10.0",
     "css.escape": "^1.5.1",
-    "diagram-js": "^7.8.1",
+    "diagram-js": "^8.2.1",
     "diagram-js-direct-editing": "^1.6.4",
     "ids": "^1.0.0",
     "inherits": "^2.0.4",
