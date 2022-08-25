@@ -42,12 +42,12 @@
     "chai": "^4.3.6",
     "chai-match": "^1.1.1",
     "eslint": "^7.32.0",
-    "eslint-plugin-bpmn-io": "^0.13.0",
+    "eslint-plugin-bpmn-io": "^0.14.1",
     "eslint-plugin-import": "^2.26.0",
     "file-loader": "^6.2.0",
-    "karma": "^6.3.20",
+    "karma": "^6.4.0",
     "karma-chrome-launcher": "^3.1.1",
-    "karma-debug-launcher": "0.0.4",
+    "karma-debug-launcher": "0.0.5",
     "karma-env-preprocessor": "^0.1.1",
     "karma-firefox-launcher": "^2.1.2",
     "karma-mocha": "^2.0.1",
@@ -60,7 +60,7 @@
     "raw-loader": "^4.0.2",
     "sinon": "^14.0.0",
     "sinon-chai": "^3.7.0",
-    "webpack": "^5.72.1"
+    "webpack": "^5.74.0"
   },
   "dependencies": {
     "bpmn-font": "^0.10.0",
@@ -72,8 +72,8 @@
     "min-dash": "^3.8.1",
     "min-dom": "^3.2.1",
     "moddle": "^5.0.3",
-    "moddle-xml": "^9.0.5",
+    "moddle-xml": "^9.0.6",
     "object-refs": "^0.3.0",
-    "tiny-svg": "^2.2.3"
+    "tiny-svg": "^2.2.4"
   }
 }
