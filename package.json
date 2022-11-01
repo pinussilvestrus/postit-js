@@ -69,7 +69,7 @@
     "diagram-js-direct-editing": "^1.7.0",
     "ids": "^1.0.0",
     "inherits": "^2.0.4",
-    "min-dash": "^3.8.1",
+    "min-dash": "^4.0.0",
     "min-dom": "^3.2.1",
     "moddle": "^6.0.0",
     "moddle-xml": "^9.0.6",
