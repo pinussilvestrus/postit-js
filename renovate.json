@@ -1,0 +1,23 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": [
+    "config:js-lib",
+    ":preserveSemverRanges",
+    ":disableDependencyDashboard"
+  ],
+  "labels": ["dependencies"],
+  "ignorePaths": [
+    "example",
+    "example-new",
+    "extension-experiments"
+  ],
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["minor", "patch", "bump", "pin"],
+      "schedule": "at any time",
+      "automerge": true,
+      "automergeType": "branch"
+    }
+  ],
+  "schedule": ["before 2am on monday"]
+}
