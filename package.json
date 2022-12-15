@@ -6,7 +6,8 @@
     "lint": "eslint .",
     "test": "karma start karma.conf.js",
     "dev": "npm test -- --auto-watch --no-single-run",
-    "sync:live": "git checkout live && git merge main && git push origin live && git checkout main"
+    "sync:live": "git checkout live && git merge main && git push origin live && git checkout main",
+    "start:example": "npm start --workspace=example"
   },
   "repository": {
     "type": "git",
@@ -37,6 +38,9 @@
   "license": "SEE LICENSE IN LICENSE",
   "sideEffects": [
     "*.css"
+  ],
+  "workspaces": [
+    "example"
   ],
   "devDependencies": {
     "chai": "^4.3.6",
