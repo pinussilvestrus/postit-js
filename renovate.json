@@ -8,7 +8,6 @@
   "labels": ["dependencies"],
   "ignorePaths": [
     "example",
-    "example-new",
     "extension-experiments"
   ],
   "packageRules": [
