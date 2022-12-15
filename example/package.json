@@ -9,7 +9,7 @@
     "build:watch": "webpack -w",
     "serve": "serve public",
     "lint": "eslint .",
-    "start": "run-s dev"
+    "start": "run-p build:watch serve"
   },
   "private": "true",
   "keywords": [
