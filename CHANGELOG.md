@@ -10,6 +10,11 @@ ___Note:__ Yet to be released changes appear here._
 
 * ...
 
+## 1.1.0
+
+* `DEPS`: use fonts via packages ([`946beda4`](https://github.com/pinussilvestrus/postit-js/commit/946beda421bd3dcea658408ea26de24439fb4981))
+* `DEPS`: update to `diagram-js@11`([`fc3eb84d`](https://github.com/pinussilvestrus/postit-js/commit/fc3eb84da7b65b2e97b0e73a730f47b0b3c941d4))
+
 ## 1.0.1
 
 * `FIX`: remove empty text boxes on cancel editing ([#20](https://github.com/pinussilvestrus/postit-js/issues/20))

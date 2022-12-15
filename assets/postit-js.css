@@ -1,20 +1,7 @@
-@font-face {
-  font-family: "IBM Plex";
-  src: url("./ibm-plex-font/IBMPlexSans-Regular.ttf");
-  font-display: swap;
-}
-
-@font-face {font-family: "Font Awesome 5 Free Solid";
-  src: url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.eot"); /* IE9*/
-  src: url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
-  url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.woff2") format("woff2"), /* chrome、firefox */
-  url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.woff") format("woff"), /* chrome、firefox */
-  url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.ttf") format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
-  url("./font-awesome-5/29f589f173dcc69ef6c805b711894998.svg#Font Awesome 5 Free Solid") format("svg"); /* iOS 4.1- */
-}
-
 @import '../node_modules/diagram-js/assets/diagram-js.css';
 @import '../node_modules/bpmn-font/dist/css/bpmn.css';
+@import '../node_modules/@ibm/plex/css/ibm-plex.min.css';
+@import '../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 
 
 /* OVERWRITING Diagram.js */
@@ -238,18 +225,13 @@ button:hover, a:hover {
 }
 
 [class*=" pjs-general-icon"]::before {
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    display: inline-block;
-    text-decoration: inherit;
-    text-align: center;
-    font-variant: normal;
-    text-transform: none;
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
 }
 
 .pjs-general-icon {
-  font-family: "Font Awesome 5 Free Solid";
+  font-family: "Font Awesome 5 Free";
   line-height: 1.2em;
 }
 
@@ -407,19 +389,18 @@ input, textarea {
 }
 
 .pjs-image-dialog-upload-icon-warning::before {
-    content:'\F071'; /*\f093*/
-    display: inline-block;
-    color: #CCCC00;
+  font: var(--fa-font-solid);
+  content:'\f071';
 } 
 
 .pjs-image-dialog-upload-icon::before {
-  content:'\F574'; /*\f093*/
-  display: inline-block;
+  font: var(--fa-font-solid);
+  content:'\f574';
 }
 
 .pjs-image-dialog-upload-icon-error::before {
-  content:'\F057';
-  display: inline-block;
+  font: var(--fa-font-solid);
+  content:'\f057';
   color: #ff0000;
 }
 
