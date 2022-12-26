@@ -37,7 +37,7 @@
   "dependencies": {
     "jquery": "^3.6.0",
     "less": "^4.1.3",
-    "less-loader": "^10.2.0",
+    "less-loader": "^11.0.0",
     "postit-js-core": "file:../"
   }
 }
