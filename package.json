@@ -78,7 +78,7 @@
     "min-dash": "^3.8.1",
     "min-dom": "^3.2.1",
     "moddle": "^6.0.0",
-    "moddle-xml": "^9.0.6",
+    "moddle-xml": "^10.0.0",
     "object-refs": "^0.3.0",
     "tiny-svg": "^2.2.4"
   }
