@@ -79,7 +79,7 @@
     "min-dom": "^4.1.0",
     "moddle": "^6.2.3",
     "moddle-xml": "^10.1.0",
-    "object-refs": "^0.3.0",
+    "object-refs": "^0.4.0",
     "tiny-svg": "^3.0.1"
   }
 }
