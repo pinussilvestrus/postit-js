@@ -43,7 +43,7 @@
     "example"
   ],
   "devDependencies": {
-    "chai": "^4.3.7",
+    "chai": "^5.0.0",
     "chai-match": "^1.1.1",
     "eslint": "^8.42.0",
     "eslint-plugin-bpmn-io": "^1.0.0",
