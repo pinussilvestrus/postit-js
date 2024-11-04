@@ -45,7 +45,7 @@
   "devDependencies": {
     "chai": "^4.3.7",
     "chai-match": "^1.1.1",
-    "eslint": "^8.42.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-bpmn-io": "^1.0.0",
     "eslint-plugin-import": "^2.27.5",
     "file-loader": "^6.2.0",
