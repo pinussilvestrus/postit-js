@@ -1,3 +1,5 @@
+> ⚠️ This project is not actively maintained and won't likely get any updates.
+
 # postit-js
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/72130b1d-f56b-473e-8f3b-50a5af916e64/deploy-status)](https://app.netlify.com/sites/postit-js-demo/deploys) ![Build Status](https://github.com/pinussilvestrus/postit-js/workflows/ci/badge.svg)
