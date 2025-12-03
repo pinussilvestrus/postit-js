@@ -46,7 +46,7 @@
     "chai": "^4.3.7",
     "chai-match": "^1.1.1",
     "eslint": "^8.42.0",
-    "eslint-plugin-bpmn-io": "^1.0.0",
+    "eslint-plugin-bpmn-io": "^2.0.0",
     "eslint-plugin-import": "^2.27.5",
     "file-loader": "^6.2.0",
     "karma": "^6.4.2",
